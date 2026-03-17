@@ -171,7 +171,7 @@ export default function Footer() {
               <p className="text-white/80 text-sm font-medium mb-3">
                 Stay in the loop:
               </p>
-              <NewsletterForm variant="default" />
+              <NewsletterForm dark={false} source="Footer" />
             </div>
           </div>
         </div>
