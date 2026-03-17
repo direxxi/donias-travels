@@ -12,7 +12,7 @@ import type { LeadSource } from "@/lib/zoho.config";
 export type { LeadSource };
 
 // ─── Submit a lead to Zoho CRM ────────────────────────────────────────────
-export async function submitLead(payload: ZohoLeadPayload): Promise<void> {
+export async function submitLead(payload: Record<string, string>): Promise<void> {
   const res = await fetch("/api/zoho/lead", {
     method: "POST",
     headers: { "Content-Type": "application/json" },

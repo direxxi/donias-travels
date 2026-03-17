@@ -1,29 +1,47 @@
 "use client";
-// src/components/ui/ScrollReveal.tsx
-// Wraps children in a Framer Motion scroll-triggered fade-in
-// Usage: <ScrollReveal><YourSection /></ScrollReveal>
+import { useRef, useEffect, useState } from "react";
 
-import { motion } from "framer-motion";
-import { fadeInUp } from "@/lib/animations";
-
-interface ScrollRevealProps {
+interface Props {
   children: React.ReactNode;
   delay?: number;
   className?: string;
-  variant?: "up" | "scale";
 }
 
-export default function ScrollReveal({ children, delay = 0, className, variant = "up" }: ScrollRevealProps) {
+export default function ScrollReveal({
+  children,
+  delay = 0,
+  className = "",
+}: Props) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
-      variants={fadeInUp}
-      transition={{ delay }}
+    <div
+      ref={ref}
       className={className}
+      style={{
+        opacity: visible ? 1 : 0,
+        transform: visible ? "translateY(0)" : "translateY(24px)",
+        transition: `opacity 0.6s ease ${delay}s, transform 0.6s ease ${delay}s`,
+      }}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

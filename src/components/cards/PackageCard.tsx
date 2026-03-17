@@ -130,7 +130,6 @@ export default function PackageCard({ pkg }: { pkg: Package }) {
             Fill in your details and we&apos;ll contact you within 24 hours.
           </p>
           <ContactForm
-            onSuccess={() => setInquiryOpen(false)}
           />
         </div>
       </Modal>
