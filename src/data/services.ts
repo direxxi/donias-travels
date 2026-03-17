@@ -1,0 +1,122 @@
+// src/data/services.ts
+import { Service } from "@/types";
+
+export const services: Service[] = [
+  {
+    icon: "FileText",
+    title: "Visa Processing",
+    slug: "visa-processing",
+    description: "Expert assistance for tourist, business, student, and transit visas to any country worldwide.",
+    features: [
+      "Document preparation & review",
+      "Application submission & tracking",
+      "Interview coaching",
+      "99% visa approval rate",
+      "UK, USA, Canada, Schengen, UAE, India & more",
+    ],
+  },
+  {
+    icon: "Plane",
+    title: "Flight Booking",
+    slug: "flight-booking",
+    description: "Domestic and international flight tickets at the most competitive rates.",
+    features: [
+      "Domestic flights across Nigeria",
+      "International routes worldwide",
+      "Corporate bulk booking discounts",
+      "Flexible rebooking support",
+      "Group travel coordination",
+    ],
+  },
+  {
+    icon: "BookOpen",
+    title: "Passport Services",
+    slug: "passport-services",
+    description: "New passports, renewals, corrections, and replacements — handled seamlessly.",
+    features: [
+      "New passport acquisition",
+      "Passport renewal (standard & express)",
+      "Name/data page corrections",
+      "Lost passport replacement",
+      "Direct NIS liaison",
+    ],
+  },
+  {
+    icon: "Hotel",
+    title: "Accommodation",
+    slug: "accommodation",
+    description: "Curated hotels, Airbnbs, and premium stays for every budget and preference.",
+    features: [
+      "Budget to 5-star luxury hotels",
+      "Serviced apartments & Airbnb",
+      "Resort bookings",
+      "Corporate housing",
+      "Long-term stay arrangements",
+    ],
+  },
+  {
+    icon: "Map",
+    title: "Personalized Itineraries",
+    slug: "personalized-itineraries",
+    description: "Custom travel plans designed around your interests, schedule, and budget.",
+    features: [
+      "Day-by-day travel schedule",
+      "Activity & restaurant curation",
+      "Local guide recommendations",
+      "Map & tips package",
+      "24/7 trip support",
+    ],
+  },
+  {
+    icon: "Building2",
+    title: "Corporate Travel",
+    slug: "corporate-travel",
+    description: "End-to-end travel management for businesses, organizations, and teams.",
+    features: [
+      "Dedicated corporate travel desk",
+      "Travel policy compliance",
+      "Expense reporting tools",
+      "Group travel coordination",
+      "Event & conference logistics",
+    ],
+  },
+  {
+    icon: "Heart",
+    title: "Medical Tourism",
+    slug: "medical-tourism",
+    description: "World-class healthcare abroad at affordable costs, with full logistics handled.",
+    features: [
+      "Hospital selection & booking",
+      "Medical visa processing",
+      "Doctor consultations",
+      "Recovery accommodation",
+      "India, Thailand, Turkey, Germany",
+    ],
+  },
+  {
+    icon: "GraduationCap",
+    title: "Study Abroad",
+    slug: "study-abroad",
+    description: "Comprehensive guidance for studying at top universities worldwide.",
+    features: [
+      "University selection & application",
+      "Student visa processing",
+      "Accommodation search",
+      "Pre-departure orientation",
+      "UK, Canada, USA, Germany",
+    ],
+  },
+  {
+    icon: "Star",
+    title: "Specialized Travel",
+    slug: "specialized-travel",
+    description: "Hajj & Umrah, honeymoons, destination weddings, safaris, and cruises.",
+    features: [
+      "Hajj & Umrah packages",
+      "Honeymoon getaways",
+      "Destination weddings",
+      "Adventure & safari tours",
+      "Mediterranean & Caribbean cruises",
+    ],
+  },
+];

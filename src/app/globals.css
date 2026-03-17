@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Brand Colors ── */
+  --color-primary: #C8102E;
+  --color-primary-dark: #9B0D23;
+  --color-primary-light: #FDE8EB;
+  --color-secondary: #1A1A2E;
+  --color-surface: #F9FAFB;
+  --color-brand-border: #E5E7EB;
+
+  /* ── Nigeria Page Colors ── */
+  --color-nigeria-green: #008751;
+  --color-nigeria-accent: #00A86B;
+  --color-nigeria-dark: #0A3D2A;
+  --color-nigeria-light: #F0FFF4;
+
+  /* ── Font Families ── */
+  --font-family-heading: var(--font-playfair), Georgia, serif;
+  --font-family-body: var(--font-dm-sans), system-ui, sans-serif;
+  --font-family-mono: var(--font-space-mono), monospace;
+
+  /* ── Animations ── */
+  --animate-fade-in-up: fadeInUp 0.6s ease-out forwards;
+  --animate-marquee: marquee 30s linear infinite;
+
+  @keyframes fadeInUp {
+    0%   { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes marquee {
+    0%   { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  color: #1A1A2E;
+  background: #ffffff;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #C8102E;
+  color: white;
+  padding: 8px 16px;
+  z-index: 9999;
+  text-decoration: none;
+  font-weight: 600;
+}
+.skip-link:focus { top: 0; }
+
+*:focus-visible {
+  outline: 2px solid #C8102E;
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #C8102E; border-radius: 3px; }
