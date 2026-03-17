@@ -274,7 +274,7 @@ export default function PackagesPage() {
       </section>
 
       {/* CUSTOM PACKAGE MODAL */}
-      <CustomPackageModal isOpen={customOpen} onClose={() => setCustomOpen(false)} />
+      <CustomPackageModal />
     </>
   );
 }

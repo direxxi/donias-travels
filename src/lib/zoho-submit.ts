@@ -7,7 +7,6 @@
 // the backend implementation without touching every form.
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-import type { ZohoLeadPayload } from "@/app/api/zoho/lead/route";
 import type { LeadSource } from "@/lib/zoho.config";
 
 export type { LeadSource };

@@ -5,7 +5,7 @@ import { Service } from "@/types";
 import * as Icons from "lucide-react";
 
 export default function ServiceCard({ service }: { service: Service }) {
-  const Icon = (Icons as Record<string, React.ElementType>)[service.icon] || Icons.Star;
+  const Icon = (Icons as unknown as Record<string, React.ElementType>)[service.icon] || Icons.Star;
   return (
     <div className="bg-white rounded-2xl p-6 border border-brand-border hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 group">
       <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary transition-colors duration-300">
